@@ -9,6 +9,8 @@ const reducer = (state = [], action: Action) => {
       return [...state, Object.assign({}, content)];
     case ActionTypes.DELETE_CONTACT:
       return state.filter((list: Phonebook) => list.id !== action.id);
+    case ActionTypes.UPDATE_CONTACT:
+      return [...state, action.payload];
     default:
       return state;
   }
