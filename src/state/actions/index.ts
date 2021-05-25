@@ -8,7 +8,7 @@ export interface AddContact {
 
 export interface DeleteContact {
   type: ActionTypes.DELETE_CONTACT;
-  payload: string;
+  id: string;
 }
 
 export interface UpdateContact {

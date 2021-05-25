@@ -19,6 +19,6 @@ export const updateContactAction = (content: Phonebook): UpdateContact => {
 export const deleteContactAction = (id: string): DeleteContact => {
   return {
     type: ActionTypes.DELETE_CONTACT,
-    payload: id,
+    id,
   };
 };
