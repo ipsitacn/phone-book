@@ -1,6 +1,9 @@
 import "./Form.css";
+import { useActions } from "../hooks/user-action";
 
 const FormComp: React.FC = () => {
+  const { addContactAction, deleteContactAction } = useActions();
+
   return (
     <div className="container">
       <button className="new-contact btn btn-primary">New Contact</button>
@@ -46,6 +49,10 @@ const FormComp: React.FC = () => {
       
     </div>
   );
+};
+
+const randomId = () => {
+  return Math.random().toString(36).substr(2, 5);
 };
 
 export default FormComp;
