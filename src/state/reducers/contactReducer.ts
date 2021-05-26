@@ -2,7 +2,7 @@ import { Action } from "../actions";
 import { ActionTypes } from "../action-types";
 import { Phonebook } from "../../Phonebook";
 
-const reducer = (state = [], action: Action) => {
+const reducer = (state: Array<any> = [], action: Action) => {
   switch (action.type) {
     case ActionTypes.ADD_CONTACT:
       const content = action.payload;
